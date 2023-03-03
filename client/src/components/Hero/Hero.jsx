@@ -17,7 +17,7 @@ function Hero() {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch("http://localhost:8000/users", {
+      await fetch("https://crud-operations-i2vk.vercel.app/users", {
         method: "post",
         body: JSON.stringify(form),
         headers: {
@@ -47,7 +47,7 @@ function Hero() {
 
   const getUsers = async () => {
     try {
-      const response = await fetch("http://localhost:8000/users");
+      const response = await fetch("https://crud-operations-i2vk.vercel.app/users");
       const data = await response.json();
       setUsers(data);
     } catch (err) {
@@ -64,7 +64,7 @@ function Hero() {
 
   const deleteAUser = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8000/users/${id}`, {
+      const response = await fetch(`https://crud-operations-i2vk.vercel.app/users/${id}`, {
         method: "delete",
       });
       const deletedUser = await response.json();

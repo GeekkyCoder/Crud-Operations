@@ -11,7 +11,6 @@ const server = http.createServer(app)
 
 const MONGO_URL = "mongodb+srv://Faraz:x3l4UGOadxlRJfFS@userscluster.tpgbw4u.mongodb.net/?retryWrites=true&w=majority"
 
-
 mongoose.connection.once("open", () => {
     console.log("MongoDB connection ready!")
   })
